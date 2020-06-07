@@ -6,3 +6,10 @@ Other needed layers:
 2. meta-openembedded
 3. meta-raspberrypi
 
+# How to copy to SD card
+After the rpi-sdimg has been generated, insert an SD card and copy the generated image with:
+```
+sudo dd if=example-image-raspberrypi3-custom.rpi-sdimg of=/dev/sdc bs=10M status=progress
+```
+
+Note that `/dev/sdc` might be different, i.e. `/dev/sdb`.
