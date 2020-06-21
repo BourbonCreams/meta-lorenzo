@@ -15,6 +15,7 @@ LIC_FILES_CHKSUM = ""
 SRC_URI = " \
 git://github.com/hubshuffle/python-flask-hello-world.git;protocol=https \
 file://python-flask-hello-world.service \
+file://0001-Change-port.patch \
 "
 
 # Add python and flask runtime dependencies

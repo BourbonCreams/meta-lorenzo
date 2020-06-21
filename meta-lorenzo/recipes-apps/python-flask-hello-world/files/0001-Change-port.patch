@@ -1,0 +1,22 @@
+From 579baa368664caf88f37c4d4a483e17e36c6396a Mon Sep 17 00:00:00 2001
+From: Lorenzo <a@a.com>
+Date: Sun, 21 Jun 2020 14:51:32 +0000
+Subject: [PATCH] Change port
+
+---
+ app.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/app.py b/app.py
+index d3c9203..1efd75a 100644
+--- a/app.py
++++ b/app.py
+@@ -11,4 +11,4 @@ def hello_world():
+ 
+ 
+ if __name__ == '__main__':
+-    app.run(host='0.0.0.0')
++    app.run(host='0.0.0.0', port=7777)
+-- 
+2.7.4
+
