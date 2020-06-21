@@ -36,3 +36,12 @@ IMAGE_INSTALL += "linux-firmware linux-firmware-bcm43430"
 
 # Add ssh server
 IMAGE_FEATURES += "ssh-server-dropbear"
+
+# Install cpp hello world example file - sources version
+IMAGE_INSTALL += "hello-world-cpp-sources"
+
+# Install cpp hello world example file - makefile version
+IMAGE_INSTALL += "hello-world-cpp-makefile"
+
+# Install python file and service
+IMAGE_INSTALL += "python-flask-hello-world"
