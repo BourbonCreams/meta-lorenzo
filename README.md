@@ -26,5 +26,11 @@ Several useful packages/utilities are included:
 6. raspistill and raspivid: launch them to take a picture or a video. Add the `--help` flag to check their parameters.
 
 ## Service to launch Python app on boot
-There is a service installed called `movement-detector` which will automatically launch the Python app to detect movement (with background subtraction) as soon as the board boots up.
+There is a service installed called `movement-detector` which will automatically launch the Python app to detect movement (with background subtraction) as soon as the board boots up. Currently this feature does not fully work as the GTK complains with `Cannot open display`.
+ 
+## Known issues
+Although the application does not run as it should on boot, it is possible to run it and see the graphical output by connecting to the Raspberry Pi via ssh (point 4 of `Included packages`) with X11 forwarding enabled (`-X` flag) and by launching the same command as the service, which is `python3 pi_surveillance.py -c conf.json`. This will open a window showing the output of the camera with its text overlays.
 
+## Python app sample output
+After connecting via ssh with X11 forwarding enabled and after running the app, this is the result:
+![alt text](https://github.com/BourbonCreams/meta-lorenzo/blob/master/screenshot.jpg?raw=true)
