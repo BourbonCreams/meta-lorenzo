@@ -1,0 +1,1 @@
+PREFERRED_VERSION_python-uuid = "1.30"

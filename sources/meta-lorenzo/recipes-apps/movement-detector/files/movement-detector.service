@@ -1,0 +1,14 @@
+[Unit]
+Description=Python Movement Detector
+
+[Service]
+Type=simple
+Restart=on-failure
+RestartSec=10s
+StandardOutput=syslog
+StandardError=syslog
+ExecStart=python3 /home/root/pi_surveillance.py -c /home/root/conf.json
+
+[Install]
+WantedBy=multi-user.target
+

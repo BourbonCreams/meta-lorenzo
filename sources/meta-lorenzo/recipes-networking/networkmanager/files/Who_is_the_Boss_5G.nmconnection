@@ -13,7 +13,7 @@ ssid=Who_is_the_Boss_5G
 [wifi-security]
 auth-alg=open
 key-mgmt=wpa-psk
-psk=INSERT_YOUR_PASSWORD
+psk=mikaelgato
 
 [ipv4]
 dns-search=

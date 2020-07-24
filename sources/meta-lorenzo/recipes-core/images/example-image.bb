@@ -11,8 +11,14 @@ EXTRA_USERS_PARAMS = "usermod -P 21 root;"
 # Enable UART
 ENABLE_UART = "1"
 
+# Enable camera
+VIDEO_CAMERA = "1"
+
 # Install vim
 IMAGE_INSTALL += "vim "
+
+# Install nano
+IMAGE_INSTALL += "nano "
 
 # Add timezone through tzdata
 IMAGE_INSTALL += "tzdata tzdata-europe "
@@ -38,10 +44,16 @@ IMAGE_INSTALL += "linux-firmware linux-firmware-bcm43430"
 IMAGE_FEATURES += "ssh-server-dropbear"
 
 # Install cpp hello world example file - sources version
-IMAGE_INSTALL += "hello-world-cpp-sources"
+IMAGE_INSTALL += "hello-world-cpp-sources "
 
 # Install cpp hello world example file - makefile version
-IMAGE_INSTALL += "hello-world-cpp-makefile"
+IMAGE_INSTALL += "hello-world-cpp-makefile "
 
-# Install python file and service
-IMAGE_INSTALL += "python-flask-hello-world"
+# Install python app
+IMAGE_INSTALL += "movement-detector "
+
+# Add Python package for the Raspberry Pi camera
+IMAGE_INSTALL += "python-picamera "
+
+# Add Python package imutils from PyImageSearch
+IMAGE_INSTALL += "python-imutils "

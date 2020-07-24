@@ -1,0 +1,1 @@
+PREFERRED_VERSION_python-imutils = "0.5.3"
