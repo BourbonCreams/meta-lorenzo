@@ -24,6 +24,7 @@ Several useful packages/utilities are included:
 4. ssh-server: after connecting the Raspberry Pi to a network, use nmtui (point 1) to connect to a network. Then use the assigned IP a client computer to connect to the Raspberry Pi via ssh
 5. OpenCV (v3.4.3): a library for Computer Vision applications
 6. raspistill and raspivid: launch them to take a picture or a video. Add the `--help` flag to check their parameters.
+7. Python Computer Vision app: a movement detector app uses OpenCV to detect movement in an area using background subtraction. Whenever it detects a movement, it can upload pictures to a DropBox account. By default Dropbox is disabled in the `/home/root/conf.json` file. It can be enabled and a Dropbox token is needed to tell the app where to upload these pictures.
 
 ## Service to launch Python app on boot
 There is a service installed called `movement-detector` which will automatically launch the Python app to detect movement (with background subtraction) as soon as the board boots up. Currently this feature does not fully work as the GTK complains with `Cannot open display`.

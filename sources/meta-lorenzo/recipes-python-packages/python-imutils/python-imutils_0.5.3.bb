@@ -21,9 +21,6 @@ do_install(){
     install -d ${D}/usr/lib/python3.5/site-packages
     install -d ${D}/usr/lib/python3.5/site-packages/imutils
 
-#    install -m 0644 "${WORKDIR}/sysroot-destdir/usr/lib/python2.7/site-packages/imutils/contours.py" "${D}/usr/lib/python3.5/site-packages/imutils"
     cp -r "${WORKDIR}/sysroot-destdir/usr/lib/python2.7/site-packages/imutils" "${D}/usr/lib/python3.5/site-packages"
 }
 
-#FILES_${PN} += "/usr/lib/python3.5/site-packages"
-#SYSROOT_DIRS += "/usr/lib/python3.5/site-packages/imutils"

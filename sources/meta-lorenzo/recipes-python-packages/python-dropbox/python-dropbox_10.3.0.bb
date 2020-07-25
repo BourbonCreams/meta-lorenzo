@@ -11,7 +11,19 @@ SRC_URI[sha256sum] = "5f296f13ee7c358ab41779a73c4922ed81199447566c1a4c8fbf23dbcd
 
 S = "${WORKDIR}/dropbox-10.3.0"
 
-#DEPENDS="python3-pytest-runner-native"
-RDEPENDS_${PN} = "python-requests python-six "
+DEPENDS="python-pytest-runner-native"
+RDEPENDS_${PN} = "python-requests python3-requests python-six python3-six"
 
 inherit setuptools
+
+do_install(){
+    # Install file for Python3 too
+    install -d ${D}/usr
+    install -d ${D}/usr/lib
+    install -d ${D}/usr/lib/python3.5
+    install -d ${D}/usr/lib/python3.5/site-packages
+    install -d ${D}/usr/lib/python3.5/site-packages/dropbox
+
+    cp -r "${WORKDIR}/sysroot-destdir/usr/lib/python2.7/site-packages/dropbox" "${D}/usr/lib/python3.5/site-packages"
+}
+
